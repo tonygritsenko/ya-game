@@ -1,0 +1,15 @@
+{
+  "background": "./images/back.svg",
+  "wine": "./images/wine.svg",
+  "milk": "./images/milk.svg",
+  "jam": "./images/jam.svg",
+  "cheese": "./images/cheese.svg",
+  "meat": "./images/meat.svg",
+  "paultry": "./images/paultry.svg",
+  "chips": "./images/chips.svg",
+  "pineapple": "./images/pineapple.svg",
+  "bananas": "./images/bananas.svg",
+  "apple": "./images/apple.svg",
+  "lettuce": "./images/lettuce.svg",
+  "cart": "./images/cart.svg"
+}

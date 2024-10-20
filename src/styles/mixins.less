@@ -1,0 +1,9 @@
+@import "vars";
+
+.hover(@params) {
+    @media @desktop-only {
+        &:hover {
+            @params();
+        }
+    }
+}

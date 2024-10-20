@@ -1,0 +1,157 @@
+@keyframes scaleAnimation {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  33% {
+    transform: scale(1.2);
+  }
+  66% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+.game {
+  padding-top: 25px;
+}
+.game__wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 3px;
+  min-height: 575px;
+}
+.game__background {
+  max-width: 212px;
+}
+.game__content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.game__item {
+  position: absolute;
+  border-radius: 40%;
+  cursor: pointer;
+  transition: opacity 0.2s ease-in-out;
+}
+.game__item:hover {
+  opacity: 0.9;
+}
+.game__item--dragging {
+  opacity: 0.8;
+}
+.game__item--wine {
+  top: 0;
+  left: 56px;
+}
+.game__item--milk {
+  top: calc(125px - 91px);
+  left: 98px;
+}
+.game__item--jam {
+  top: calc(125px - 42px);
+  left: 137px;
+}
+.game__item--cheese {
+  top: calc(125px - 35px);
+  left: 192px;
+}
+.game__item--meat {
+  top: calc(220px - 49px);
+  left: 41px;
+}
+.game__item--paultry {
+  top: calc(220px - 50px);
+  left: 92px;
+}
+.game__item--chips {
+  top: calc(220px - 41px);
+  left: 163px;
+}
+.game__item--pineapple {
+  top: calc(315px - 75px);
+  left: 47px;
+}
+.game__item--bananas {
+  top: calc(315px - 48px);
+  left: 92px;
+}
+.game__item--apple {
+  top: calc(315px - 36px);
+  left: 149px;
+}
+.game__item--lettuce {
+  top: calc(315px - 45px);
+  left: 190px;
+}
+.game__item.not-draggable {
+  cursor: not-allowed;
+}
+.game__cart {
+  position: absolute;
+  display: flex;
+  bottom: 0;
+  height: 229px;
+  width: 100%;
+  z-index: 1;
+  cursor: pointer;
+}
+.game__cart-image {
+  position: absolute;
+  z-index: 1;
+}
+.game__cart-list {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  padding-left: 82px;
+  gap: 5px;
+  height: 164px;
+  z-index: 0;
+}
+.game__cart-item {
+  position: static;
+}
+.game__cart-item img {
+  transform: scale(1.5);
+  transition: transform 0.4s ease;
+}
+.game__cart-link {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  max-width: 174px;
+  width: 100%;
+  min-height: 56px;
+  bottom: 20px;
+  left: calc(50% - 174px / 2);
+  line-height: 17px;
+  letter-spacing: -0.005em;
+  background-color: #FCE000;
+  outline: 2px solid transparent;
+  border-radius: 16px;
+  transition: outline 0.2s ease-in-out;
+  visibility: hidden;
+  opacity: 0;
+}
+.game__cart-link--active {
+  visibility: visible;
+  opacity: 1;
+  z-index: 3;
+  animation: scaleAnimation 0.9s ease-in-out;
+}
+.game__cart-link:hover:not(:focus-visible) {
+  outline-color: #FCE000;
+}
+.game__cart-link:focus,
+.game__cart-link:active {
+  outline: 0;
+}
